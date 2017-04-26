@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, make_response, request
-from lib.database import User, FacebookUsers
-from lib import facebook_api
+from app.database import User, FacebookUsers
+from app import facebook_api
 
 server = Flask(__name__)
 fb_users = FacebookUsers()
@@ -40,7 +40,7 @@ def add_user():
     try:
         user_data = facebook_api.get_user_info(id)
         user_name = user_data['username'] if 'username' in user_data else ''
-        gender = user_data['gender'] if 'gender' in user_data else ''
+        gender = user_data['gender'] if 'gender ' in user_data else ''
         new_user = User(id=user_data['id'], name=user_data['name'], username=user_name, gender=gender)
         fb_users.add(new_user)
         return make_response('', 201)
