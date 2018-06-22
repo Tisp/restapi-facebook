@@ -44,7 +44,7 @@ Resposta: HTTP 200
 #### Remover usuário:
 
 ```shell
-curl ­X DELETE http://localhost:xxxx/person/670286562/
+curl -X DELETE http://localhost:xxxx/person/670286562/
 ```
 
 Resposta: HTTP 204
