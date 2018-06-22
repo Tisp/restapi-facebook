@@ -13,7 +13,6 @@ Pequeno script para teste da api do facebook utilizando python3 com flask e SQLA
   **app/config.py**:
 
   ```python
-    #Facebook token
     facebook_token = "TOKEN"
   ```
 
@@ -37,7 +36,7 @@ Resposta: HTTP 201
 #### Listagem do usuários:
 
 ```shell
-curl http://localhost:5000/person/?limit=10
+curl -X GET http://localhost:5000/person/?limit=10
 ```
 Resposta: HTTP 200
 
