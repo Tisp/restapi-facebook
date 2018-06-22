@@ -5,7 +5,7 @@ Pequeno script para teste da api do facebook utilizando python3 com flask e SQLA
 
 ### Instalação:
 ```shell
-    pip install requirements.txt
+    pip install -r requirements.txt
 ```
 ### Utilização:
 
